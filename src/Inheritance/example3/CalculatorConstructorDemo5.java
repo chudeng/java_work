@@ -40,7 +40,6 @@ public class CalculatorConstructorDemo5 {
 		c1.sum();
 		c1.avg();
 		c1.substract();
-
 	}
 
 }

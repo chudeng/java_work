@@ -1,4 +1,4 @@
-package example;
+package Study;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -19,9 +19,14 @@ public class ch2 {
 		String name = sc.next();
 		System.out.println("Hello" + name);*/
 		//2-15
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		String addr = sc.nextLine();
-		System.out.println("林家: " + addr);
+		System.out.println("林家: " + addr);*/
+		//2-16
+		String varchar = "ABC";
+		System.out.println(varchar);
+		varchar = "XYZ";
+		System.out.println(varchar);
 		
 	}
 
