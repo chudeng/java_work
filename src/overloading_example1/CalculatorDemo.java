@@ -32,6 +32,7 @@ public class CalculatorDemo {
 		c1.setOperands(10, 20);
 		c1.sum();
 		c1.avg();
+		System.out.println(c1.third);
 		c1.setOperands(10, 20, 30);
 		c1.sum();
 		c1.avg();
