@@ -187,7 +187,7 @@ public class ch3 {
 		}*/
 		
 		//3-19
-		int stk;
+		/*int stk;
 		
 		if (num1 >= num2) {
 			stk = num1;
@@ -205,7 +205,8 @@ public class ch3 {
 			num2 = stk;
 		}
 		
-		System.out.println(num1 + "," + num2 + "," + num3);
+		System.out.println(num1 + "," + num2 + "," + num3);*/
+		
 		sc.close();
 
 	}
