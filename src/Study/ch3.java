@@ -10,7 +10,7 @@ public class ch3 {
 		Scanner sc = new Scanner(System.in);
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
-		//int num3 = sc.nextInt();
+		int num3 = sc.nextInt();
 		//double dnum1 = sc.nextDouble();
 		//double dnum2 = sc.nextDouble();
 		//3-1
@@ -176,7 +176,7 @@ public class ch3 {
 		}*/
 		
 		//3-18
-		int stk;
+		/*int stk;
 		if (num1 >= num2) {
 			System.out.println("no chages");
 		}else {
@@ -184,8 +184,28 @@ public class ch3 {
 			num1 = num2;
 			num2 = stk;
 			System.out.println("num1 and num2 are changed");
+		}*/
+		
+		//3-19
+		int stk;
+		
+		if (num1 >= num2) {
+			stk = num1;
+			num1 = num2;
+			num2 = stk;
+		}
+		if (num2 >= num3) {
+			stk = num2;
+			num2 = num3;
+			num3 = stk;
+		}
+		if (num1 >= num2) {
+			stk = num1;
+			num1 = num2;
+			num2 = stk;
 		}
 		
+		System.out.println(num1 + "," + num2 + "," + num3);
 		sc.close();
 
 	}
