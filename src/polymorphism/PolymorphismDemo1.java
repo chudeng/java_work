@@ -1,0 +1,24 @@
+package polymorphism;
+
+class A{
+	public String x() {
+		return "x";
+	}
+}
+
+class B extends A{
+	public String y() {
+		return "y";
+	}
+}
+
+public class PolymorphismDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A obj = new B();
+		obj.x();
+		obj.y();
+	}
+
+}

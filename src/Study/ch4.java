@@ -1,12 +1,15 @@
 package Study;
 
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
 
 public class ch4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
+		Random rand = new Random();
 		
 		//4-1
 		/*while(true) {
@@ -36,7 +39,7 @@ public class ch4 {
 		System.out.println("종료합니다.");*/
 		
 		//4-2
-		while(true) {
+		/*while(true) {
 			System.out.println("3자리 양의 정수값을 입력하세요.");
 			int num = sc.nextInt();
 			if (num  < 100) {
@@ -47,6 +50,79 @@ public class ch4 {
 				System.out.println("입력한 수: " + num);
 				break;
 			}
+		}*/
+		
+		//4-3
+		/*int Qnum = rand.nextInt(90)+10;
+		int answer = 0;
+		do {
+			System.out.println("2자리 숫자를 입력하세요:");
+			answer = sc.nextInt();
+			if (Qnum > answer) {
+				System.out.println("Up!");
+			} else if (Qnum < answer) {
+				System.out.println("Down!");
+			}
+		} while (Qnum != answer); {
+			System.out.println("You win!");
+		}*/
+		
+		//4-4
+		/*System.out.println("First num input");
+		int num1 = sc.nextInt();
+		System.out.println("Second num input");
+		int num2 = sc.nextInt();
+		int size = Math.abs(num2-num1);
+		int array[] = new int[size+1];
+		if (num1 > num2) {
+			for (int i = 0; i < size+1; i++) {
+				array[i] = i+num2;
+			}
+		}else if (num2 > num1) {
+			for (int i = 0; i < size+1; i++) {
+				array[i] = i+num1;
+			}
+		}else {
+			array[0] = num1;
 		}
+		Arrays.sort(array);
+		System.out.println(Arrays.toString(array));
+		*/
+		
+		//4-5
+		/*System.out.println("input any number to be counted.");
+		int num = sc.nextInt();
+		if (num > 0) {
+			do {
+				System.out.println(num--);
+			} while(num != 0); {
+				System.out.println(num);
+				System.out.println("종료 후 변수 값:" + (num-1));
+			}
+		} else if (num < 0) {
+			do {
+				System.out.println(num);
+				num ++;
+			} while(num != 0); {
+				System.out.println(num);
+				System.out.println("종료 후 변수 값:" + (num+1));
+			}
+		}*/
+		
+		//4-7
+		/*int num = sc.nextInt();
+		String star = "*";
+		String stars = ""; 
+		
+		if (num < 1) {
+			System.out.println("");
+		} 
+		
+		if (num >= 1 ) {
+			for (int i = 0; i < num ; i++) {
+					stars = stars + star;
+			}
+			System.out.println(stars + "\n");
+		}*/
 	}
 }
