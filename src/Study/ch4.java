@@ -124,5 +124,55 @@ public class ch4 {
 			}
 			System.out.println(stars + "\n");
 		}*/
+		
+		//4-8
+		/*System.out.print("Input number as quantity to be printed out:");
+		int num = sc.nextInt();
+		for (int i = 0; i < num; i++) {
+			if (i%2 == 0) {
+				System.out.print("+");
+			} else {
+				System.out.print("*");
+			}
+		}
+		System.out.println("\n");
+		*/
+		
+		//4-9
+		/*int num = 0;
+		int count = 0;
+		do {
+			System.out.print("Input positive number to be printed out:");
+			num = sc.nextInt();
+		}while (num <= 0); {
+			//System.out.println((int)(Math.log10(num)+1));
+//			int count = 0;
+//			while(num != 0) {
+//				num = num/10;
+//				count ++;
+//				
+//			}
+//			System.out.println(count);	
+			for(int i=10; num != 0; count++) {
+				num = num/i;
+			}
+			System.out.println(count);
+		}*/
+		
+		//4-10
+		/*
+		int num = 0;
+		int factorial = 1;
+		do {
+			System.out.print("Input positive number to be factorial: ");
+			num = sc.nextInt();
+		}while(num <= 0);{
+			while(num != 0) {
+				factorial = factorial * num;
+				num --;
+			}
+		}
+		System.out.println("factorial value: " + factorial);
+		*/
 	}
 }
