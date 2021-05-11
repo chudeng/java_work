@@ -236,10 +236,10 @@ public class ch4 {
 		int increasment = sc.nextInt();
 		System.out.println("범주-->(최소값: " + min + " 최대값: " + max + " 증감값: " + increasment + ")\n\t신장\t|\t표준체중\n------------------------------------");
 		
-		for (int i = min; i <= max; i = i + increasment) {
+		for (; min <= max; min = min + increasment) {
 			double standard = 0;
-			standard = (i - 100) * 0.9;
-			System.out.println("\t" + i + "\t|\t" + standard);
+			standard = (min - 100) * 0.9;
+			System.out.println("\t" + min + "\t|\t" + standard);
 		}
 	}
 	
