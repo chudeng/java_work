@@ -174,5 +174,73 @@ public class ch4 {
 		}
 		System.out.println("factorial value: " + factorial);
 		*/
+		
+		//4-13: 입력받은 양의정수값까지 0부터 카운트 업.
+		/*
+		int num = 0;
+		do {
+			System.out.print("양의정수 값 입력:");
+			num = sc.nextInt();
+		}while (num < 0);{
+		}
+		System.out.println("카운트를 시작합니다.");
+		for (int i = 0; i <= num; i++) {
+			System.out.println(i);
+			
+		}*/
+		
+		//4-14: 1부터 n까지의 합을 구하는 프로그램을 작성하시오.(for문)
+		/*
+		int num = 0;
+		int sum = 0;
+		do {
+			System.out.print("양의정수 값 입력:");
+			num = sc.nextInt();
+		} while (num < 0);{
+			
+		}
+		for (int i = 1; i <= num; i++) {
+			sum = sum + i;
+		}
+		System.out.print(num + "까지의 합:" + sum);
+		*/
+		
+		//4-15: 4-14 프로그램을 수정해서 결과뿐만 아니라 계산식까지 표시하는 프로그램을 작성하시오.
+		/*int num = 0;
+		int sum = 0;
+		do {
+			System.out.print("양의정수 값 입력:");
+			num = sc.nextInt();
+		} while (num < 0);{
+			
+		}
+		
+		System.out.print(num + "까지의 합:");
+		
+		for (int i = 1; i < num; i++) {
+			sum = sum + i;
+			System.out.print(i + "+");
+		}
+		System.out.print(num + "=" + (sum + num));
+		*/
+		
+		//4-16: 신장별 표준 체중 대응표를 표시하는 프로그램을 작성.
+		//표준 체중 = (신장 - 100) * 0.9
+		//표시할 신장의 범위(최소/최대/증가값)는 정수값으로 입력 받을 것.
+		System.out.println("신장별 표준 체중 대응표");
+		System.out.print("신장 최대값: ");
+		int max = sc.nextInt();
+		System.out.print("신장 최소값: ");
+		int min = sc.nextInt();
+		System.out.print("신장 증가값: ");
+		int increasment = sc.nextInt();
+		System.out.println("범주-->(최소값: " + min + " 최대값: " + max + " 증감값: " + increasment + ")\n\t신장\t|\t표준체중\n------------------------------------");
+		
+		for (int i = min; i <= max; i = i + increasment) {
+			double standard = 0;
+			standard = (i - 100) * 0.9;
+			System.out.println("\t" + i + "\t|\t" + standard);
+		}
 	}
+	
 }
