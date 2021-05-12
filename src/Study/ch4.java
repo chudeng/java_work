@@ -227,7 +227,7 @@ public class ch4 {
 		//4-16: 신장별 표준 체중 대응표를 표시하는 프로그램을 작성.
 		//표준 체중 = (신장 - 100) * 0.9
 		//표시할 신장의 범위(최소/최대/증가값)는 정수값으로 입력 받을 것.
-		System.out.println("신장별 표준 체중 대응표");
+		/*System.out.println("신장별 표준 체중 대응표");
 		System.out.print("신장 최대값: ");
 		int max = sc.nextInt();
 		System.out.print("신장 최소값: ");
@@ -240,7 +240,77 @@ public class ch4 {
 			double standard = 0;
 			standard = (min - 100) * 0.9;
 			System.out.println("\t" + min + "\t|\t" + standard);
+		}*/
+		
+		//4-17: 입력한 수만틈 '*'을 표시하는 문제를 변경해서 5개 단위로 줄바꿈해서 표시.
+		/*
+		int num = 0;
+		System.out.print("출력할 별의 갯수: ");
+		num = sc.nextInt();
+		for (int i = 1; i <= num; i++) {
+			int remainder = i%5;
+			System.out.print("*");
+			if (i >= 5 && remainder == 0) {
+				System.out.print("\n");
+			}
 		}
+		*/
+		
+		//4-18: 입력한 정수값의 모든 약수와 그 개수를 표시하는 프로그램
+		/*
+		int aliquot = 0;
+		int num = 0;
+		do {
+			System.out.print("정수 입력:");
+			num = sc.nextInt();
+		}while(num <= 0);
+		
+		System.out.print(num + "의 약수 및 개수\n약수:");
+		for (int i = 1; i <= num; i++) {
+			if (num%i == 0) {
+				System.out.print(i + " ");
+				aliquot ++;
+			}
+		}
+		System.out.println("\t개수: " + aliquot);
+		*/
+		
+		//4-19: 1부터 n까지의 정수값에 각 값을 제곱해서 표시하는 프로그램을 작성하시오.
+		/*
+		int num = 0;
+		do {
+			System.out.print("정수 입력:");
+			num = sc.nextInt();
+		}while(num <= 0);
+		
+		for (int i = 1; i <= num; i++) {
+			System.out.println(i + "의 제곱은 " + (i * i) + " 입니다.");
+		}
+		*/
+		
+		//4-20: 달(월)을 정수값으로 입력받아서 해당하는 달의 계절을 표시하는 프로그램을 작성하시오.
+		//원하는 만큼 입력 및 출력할 수 있게 하고, 1~12 이외의 값이 입력되는 경우, 재입력 되도록 할 것.
+		int num = 0;
+		int Continue = 0;
+		do {
+			System.out.print("정수 입력:");
+			num = sc.nextInt();
+			if(num >= 1 && num <= 12) {
+				if(num == 12 || num == 1 || num == 2) {
+					System.out.println(num + "월은 겨울입니다.");
+				} else if(num == 3 || num == 4 || num == 5) {
+					System.out.println(num + "월은 봄입니다.");
+				} else if(num == 6 || num == 7 || num == 8) {
+					System.out.println(num + "월은 여름입니다.");
+				} else{
+					System.out.println(num + "월은 가을입니다.");
+				}
+				do {
+					System.out.print("다시 입력 하시겠습니까? (Yes: 1, No: 0): ");
+					Continue = sc.nextInt();
+				} while (Continue != 1 && Continue != 0);
+			}	
+		} while(num < 1 || num > 12 || Continue == 1);
 	}
 	
 }
