@@ -290,6 +290,7 @@ public class ch4 {
 		
 		//4-20: 달(월)을 정수값으로 입력받아서 해당하는 달의 계절을 표시하는 프로그램을 작성하시오.
 		//원하는 만큼 입력 및 출력할 수 있게 하고, 1~12 이외의 값이 입력되는 경우, 재입력 되도록 할 것.
+		/*
 		int num = 0;
 		int Continue = 0;
 		do {
@@ -311,6 +312,106 @@ public class ch4 {
 				} while (Continue != 1 && Continue != 0);
 			}	
 		} while(num < 1 || num > 12 || Continue == 1);
+		*/
+		
+		//4-21: 기호 문자 '*'을 나열해서 n단의 정방형(정사각형을)표시하는 프로그램을 작성하시오.
+		/*
+		int num = 0;
+		do {
+			System.out.print("정사각형 크기 입력(1 = *): ");
+			num = sc.nextInt();
+		}while (num <=0);
+		
+		for (int i = 1; i <= num; i++) {
+			for (int j = 1; j <= num; j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+		*/
+		
+		//4-21**: 기호 문자 '*'을 나열해서 3x5 직사각형을 표시하는 프로그램을 작성하시오.
+		/*
+		int num = 0;
+		do {
+			System.out.print("직사각형 층 입력(1 = *): ");
+			num = sc.nextInt();
+		}while (num <=0);
+		
+		for (int i = 1; i <= num; i++) {
+			for (int j = 1; j <= 5; j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+		*/
+		
+		//4-22: "*"을 나열해서 직각 삼각형을 표시하는 프로그램을 작성하시오
+		//- 직각의치가 왼쪽 아래 하나, 왼쪽 위 하나 각각 표시되게
+		/*
+		int num = 0;
+		do {
+			System.out.print("직사각형 층 입력(1 = *): ");
+			num = sc.nextInt();
+		}while (num <=0);
+		
+		for (int i = 1; i <= num; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+		
+		for (int i = num; i >= 1; i--) {
+			for (int j = i; j >= 1; j--) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+		*/
+		
+		//4-23:"*"로 n층의 이등변삼각형을 표시하는 프로그램을 작성하세요.
+		/*
+		int num = 0;
+		do {
+			System.out.print("정삼각형 층 입력(1 = *): ");
+			num = sc.nextInt();
+		}while (num <=0);
+		
+		
+		for (int i = 1; (i/2) < num; i = i + 2) {
+			for (int j = (num-(i/2)); j >= 2; j--) {
+				System.out.print(" ");
+			}
+			
+			for (int l = 1; l <= i; l++) {
+				System.out.print("*");
+			}	
+			System.out.println("");
+			
+		}
+		*/
+		
+		//4-24: n단의 숫자 피라미드를 표시하는 프로그램을 작성하세요.
+		// 두자리수까지만 고려하며, 2자리수는 1의 자리 숫자로 표시.
+		int num = 0;
+		do {
+			System.out.print("정삼각형 층 입력: ");
+			num = sc.nextInt();
+		}while (num <=0);
+		
+		
+		for (int i = 1; i <= num; i++) {
+			for (int j = num - i; j >= 1; j--) {
+				System.out.print(" ");
+			}
+			
+			for (int l = 1; l <= (2*i)-1; l++) {
+				System.out.print((i%10));
+			}	
+			System.out.println("");
+			
+		}
 	}
 	
 }
