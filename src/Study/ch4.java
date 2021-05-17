@@ -394,6 +394,7 @@ public class ch4 {
 		
 		//4-24: n단의 숫자 피라미드를 표시하는 프로그램을 작성하세요.
 		// 두자리수까지만 고려하며, 2자리수는 1의 자리 숫자로 표시.
+		/*
 		int num = 0;
 		do {
 			System.out.print("정삼각형 층 입력: ");
@@ -412,6 +413,107 @@ public class ch4 {
 			System.out.println("");
 			
 		}
+		*/
+		
+		//4-25: 양의 정수랎을 입력받아서 인지 판정하는 프로그램을 작성하시오.
+		//란 2이상 n미만인 수 중 어던 수로도 나누어지지 않는 정수값 n이다.
+//		(즉, 1과 자기 자신으로만 나누어 떨어지는 수)
+		/*
+		int num = 0;
+		do {
+			System.out.print("2 이상의 양의 정수값을 입력하세요: ");
+			num = sc.nextInt();
+		}while (num <= 1);
+		
+		for (int i = 2; i <= num; i++) {
+			if (num == i) {
+				System.out.println(num + "은(는) 소수 입니다.");
+			} else if (num%i == 0) {
+				System.out.println(num + "은(는) 소수가 아닙니다.");
+				break;
+			}
+		}
+		*/
+		
+		//4-26: 정수값을 연속해 입력받아 합계와 평균을 구하는 프로그램을 작성하시오.
+//		(0 입력 받으면 프로그램 종료)
+		/*
+		int num = 0;
+		int sum = 0;
+		do {
+			System.out.print("몇개의 정수를 입력 할까요? ");
+			num = sc.nextInt();
+		}while (num <= 0);
+		
+		int[] inputNum = new int[num];
+		for (int i = 0; i <num; i++) {
+			System.out.print((i+1) + "번째 정수를 입력하세요(종료:0): ");
+			inputNum[i] = sc.nextInt();
+			if (inputNum[i] == 0) {
+				System.out.println("종료합니다.");
+				break;
+			}
+			sum = sum + inputNum[i];
+		}
+
+		System.out.println("입력한 수의 합: " + sum);
+		System.out.println("입력한 수의 평균: " + (sum/(double)num));
+		*/
+		
+//		4-27: 정수값을 입력받아 합계와 평균을 구하는 프로그램을 작성하시오.(for 문 사용)
+//		정수값의 입력은 합계가 1000을 넘지 않는 범위에서 이루어지도록 하세요.
+		/*
+		int num = 0;
+		int sum = 0;
+		do {
+			System.out.print("몇개의 정수를 입력 할까요? ");
+			num = sc.nextInt();
+		}while (num <= 0);
+		
+		int[] inputNum = new int[num];
+		for (int i = 0; i <num; i++) {
+			System.out.print((i+1) + "번째 정수를 입력하세요(종료:0): ");
+			inputNum[i] = sc.nextInt();
+			if (inputNum[i] == 0) {
+				System.out.println("종료합니다.");
+				break;
+			} else if ((sum + inputNum[i]) > 1000) {
+				System.out.println("합계가 1000을 넘었습니다. 마지막 값을 무시한 나머지 입력갑의 합과 평균을 표시 합니다.");
+				System.out.println("입력한 수의 합: " + sum);
+				System.out.println("입력한 수의 평균: " + (sum/(double)num));
+				break;
+			} else {
+				sum = sum + inputNum[i];
+			}
+		}
+		*/
+		
+//		4-28: 정수값을 입력받고, 입력받은 수에서 음수를 제외한 나머지 수의 합과 평균을 구하는 프로그램을 작성하시오.(for 문)
+		int num = 0;
+		int sum = 0;
+		int countPositive = 0;
+		int countNegative = 0;
+		do {
+			System.out.print("몇개의 정수를 입력 할까요? ");
+			num = sc.nextInt();
+		}while (num <= 0);
+		
+		for (int i = 0; i <num; i++) {
+			System.out.print((i+1) + "번째 정수를 입력하세요(종료:0): ");
+			int inputNum = sc.nextInt();
+			if (inputNum == 0) {
+				System.out.println("종료합니다.");
+				break;
+			} else if ( inputNum < 0) {
+				countNegative = countNegative + 1;
+				continue;
+			} else {
+				countPositive = countPositive + 1;
+				sum = sum + inputNum;
+			}
+		}
+		System.out.println("입력한 수의 합: " + sum);
+		System.out.println("입력한 수의 평균: " + (sum/(double)countPositive));
 	}
 	
 }
