@@ -4,6 +4,9 @@ class Calculator{
 	int left, right;
 	
 	public void setOperands(int left, int right) {
+		if (right == 0) {
+			throw new IllegalArgumentException("두번째 인자의 값은 0이 될 수 없습니다.");
+		}
 		this.left = left;
 		this.right = right;
 	}

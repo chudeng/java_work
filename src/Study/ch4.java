@@ -489,6 +489,7 @@ public class ch4 {
 		*/
 		
 //		4-28: 정수값을 입력받고, 입력받은 수에서 음수를 제외한 나머지 수의 합과 평균을 구하는 프로그램을 작성하시오.(for 문)
+		/*
 		int num = 0;
 		int sum = 0;
 		int countPositive = 0;
@@ -514,6 +515,38 @@ public class ch4 {
 		}
 		System.out.println("입력한 수의 합: " + sum);
 		System.out.println("입력한 수의 평균: " + (sum/(double)countPositive));
+		*/
+		
+//		4-29: 5개의 정수로 구성된 그룹의 전체 합계(그룹별 합계 아닌 전체 그룹의합)을 구하는 프로그램을 작성하시오.
+//		전체 10개의 그룹이 있으며, 각 정수값은 키보드로 입력한다. 이 때, 99999를 입력하면 전체 입력 종료.
+//		88888을 입력하면 현재 읽고 있는 그룹의 입력을 종료 하시오.
+		int[][] numsMatrix = new int[10][5];
+		int sum = 0;
+		
+		loopout:
+		for(int i=0; i<10; i++) {
+			int numInput = 0;
+			for(int j=0; j<5; j++) {
+				System.out.print((i+1) + "그룹의 " + (j+1) + "번째 정수(정수만!!)를 입력하세요.(88888: 그룹 입력 종료. 99999: 전체 입력 종료):");
+				numInput = sc.nextInt();
+				if (numInput == 99999) {
+					System.out.println("전체입력 종료 합니다.");
+					break loopout;
+				} else if(numInput == 88888) {
+					System.out.println((i+1) + "그룹 입력을 종료합니다.");
+					break;
+				} else {
+					numsMatrix[i][j] = numInput;
+				}
+			}
+		}
+		for(int i=0; i<10; i++) {
+			for(int j=0; j<5; j++) {
+				sum = sum + numsMatrix[i][j];
+			}
+		}
+		System.out.println("입력한 수의 총 합:" + sum);
+		
 	}
 	
 }
